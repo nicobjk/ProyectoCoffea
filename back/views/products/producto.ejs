@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include ('../partials/head.ejs')%>
+<link rel="stylesheet" href="/css/styles_producto.css">
+<link rel="stylesheet" href="/css/styles.css">
+<body>
+    <%- include ('../partials/header.ejs')%>
+    <main>
+        <section id="seccion1">
+            <div id="imagen">
+                <img id="imagenproducto" src="/images/<%= product.image %>" alt="Café juan Valdéz">
+            </div>
+        </section>
+        <section id="seccion2">
+            <div id="detalleproducto">
+                <h1><%= product.name %></h1> <br>
+                <p class="origen">Origen: <%= product.origin_id  %> </p> <br>
+                <div class="calificacion">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>            
+                </div>
+                <p class="precio">$ <%= product.price %></p>
+            </div>
+            <div>
+                <form class="opciones" action="/iconoCarrito" method="get">
+                <button type="submit">Agregar al Carrrito</button>
+                </form>
+                <a href="/products/edit/<%= product.id %>" class="editar">Editar</a>
+                <form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                    <button class="eliminar" type="submit" class="action-button delete">Eliminar</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <br>
+            <br>
+            <div class="descripcion">
+                <h4>Descripción ＋</h4>
+                <P><%= product.description %></p>
+            </div>
+            <br>
+            <br>
+           <!-- <div class="caracteristicas">
+                <h4>Caracteristicas ＋</h4>
+                <img id="caracteristcasimg" src="/images/<%= product.features %>" alt="caracteristicas del Café">
+            </div> 
+            <div class="reviews">
+                <h4>Reviews ＋</h4>
+                <form class="comentario" action="/comentario" method="post">
+                    <label for="comentario">Deja tu comentario</label>
+                    <textarea name="comentario" id="comentario" cols="30" rows="10">Comentario</textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>-->
+        </section>       
+      <!--  <section>
+            <h3>PRODUCTOS RELACIONADOS</h3>
+            <div id="productosrelacionados">
+                <article class="producto1">
+                    <div id="productorelacionado">
+                    <a href="#"><img class="imgproducto1" src="/images/pilao.jpg"></a>
+                    </div>
+                    <div class="datos-producto">    
+                    <a href="#" class="descrpcion-pilao">Café Pilao Tradicional Brasil 500g</a>
+                    <p class="precio">$3500</p>
+                    <a href="#" class="boton">Ver más</a>
+                    </div>
+                </article>
+                <article class="producto2">
+                    <div class="imagen-cafe">
+                    <a href="#"><img src="/images/trung.jpeg"></a>
+                    </div>
+                    <div class="datos-producto">
+                    <a href="#" class="descrpcion-trung">Café Trung Nguyen Gourmet Blend Vietnam 500g</a>
+                    <p class="precio">$10000</p>
+                    <a href="#" class="boton">Ver más</a>
+                    </div>
+                </article>
+            </div>                          
+        </section>-->
+    </main>
+    <%- include ('../partials/footer.ejs')%>
+    
+</body>
+
+</html>

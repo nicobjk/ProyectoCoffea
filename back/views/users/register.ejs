@@ -1,0 +1,85 @@
+<!--Formulario de registro de la pagina-->
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('../partials/head.ejs')%>
+    <link rel="stylesheet" href="../css/styles_registro.css">
+    
+<body>
+    <%- include ('../partials/header.ejs')%>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src = "/js/userRegister.js"> </script>
+
+<main>  
+   <form action="/users/register" method="POST" class="create-form" enctype="multipart/form-data">
+    <div>
+       <h1 id="titulo">Crear cuenta</h1>
+    </div>
+   
+    <fieldset class="grupo"> 
+
+    <div class="profileImage">
+        <label for="profileImage"><strong>Elegí una foto de perfil:</strong></label>
+        <input type="file" name="avatar" id="profileImage">
+            <% if (locals.errors && errors.avatar) { %>
+            <div class="text-danger"> <%= errors.avatar.msg %> </div>
+            <% } %>
+        <p class="errorImage errorFront"></p>
+    </div>
+    
+    <div class="campo">
+       <label for="nombre"><strong>Nombre y Apellido:</strong></label>
+       <input type="text" name="name" id="nombre" placeholder="Ej.: Juan Valdéz" value = "<%= locals.oldData ? oldData.name : null %>">
+            <% if (locals.errors && errors.name) {%>
+            <div class="text-danger"><%= errors.name.msg %>  </div>
+            <% } %>
+        <p class="errorName errorFront"></p>
+    </div>
+       
+    <div class="campo">
+       <label for="email"><strong>E-mail:</strong></label>
+       <input type="text" name="email" id="email" placeholder="Ej.: tunombre@email.com"value = "<%= locals.oldData ? oldData.email : null %>">
+            <% if (locals.errors && errors.email) {%>
+            <div class="text-danger"><%= errors.email.msg %>  </div>
+            <% } %>
+        <p class="errorEmail errorFront"></p>
+    </div>
+     
+    <div class="campo">
+       <label for="telefono"><strong>Telefono (opcional):</strong></label>
+       <input type="text" name="tel" id="telefono" placeholder="Ej.: 1123456789" value = "<%= locals.oldData ? oldData.tel : null %>">
+            <% if (locals.errors && errors.tel) {%>
+            <div class="text-danger"><%= errors.tel.msg %>  </div>
+            <% } %>
+    </div>
+    
+    <div class="campo">
+         <label for="contraseña"><strong>Contraseña:</strong></label>
+         <input type="password" name="password" id="contrasenia" placeholder="**********">
+            <% if (locals.errors && errors.password) {%>
+            <div class="text-danger"><%= errors.password.msg %>  </div>
+            <% } %>
+        <p class="errorPassword errorFront"></p>
+    </div>
+      
+    <div class="campo">
+        <label for="contraseña"><strong>Confirmar contraseña:</strong></label>
+        <input type="password" name="confirmPassword" id="confirmarContrasenia" placeholder="**********">
+        <p class="errorConfirmPassword errorFront"></p>
+    </div>
+   
+    <div>
+       <button  type="submit" class="boton">CREAR CUENTA</button>
+    </div>
+    <div class="sesion">
+       <p>  ¿Ya tenés una cuenta? </p>
+       <a href="/users/login">Iniciá sesión </a>
+    </div>
+ 
+    </fieldset>
+    </form>
+</main>
+
+<!--Footer del formulario de registro de la pagina -->
+<%- include ('../partials/footer.ejs')%>
+</body>
+</html>

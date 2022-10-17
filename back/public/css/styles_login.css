@@ -1,0 +1,145 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+main .iniciar-sesion {
+    text-align: center;
+
+}
+section.form-login 
+{
+    display: flex;
+    box-sizing: border-box;
+    width: 40%;
+    padding: 15px;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    flex-wrap: wrap;
+    max-width: 400px;
+    background-color: #fef9f2;
+    border: solid rgba(109, 109,109,0.1) 1px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+    
+.iniciar-sesion {
+    color: #2c3425;
+    margin-top: 24px;
+    
+}
+
+
+span.error {
+    width: 90%;
+    text-align: left;
+    font-size: 15px;
+}
+
+label{
+    width: 90%;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    color: #2c3425; 
+    text-align: left;
+    width: 95%;
+    border-radius: 5px;
+    font-weight: 600;
+        
+}
+
+
+input{
+    width: 95%;
+    padding: 6px 12px;
+    display: block;
+    text-align: left;
+    border-radius: 5px;
+}
+
+input:focus, div.recordarme:focus, .boton:focus  {
+    background: rgb(240, 243, 245);
+    border:1px solid #2090e6;
+} 
+
+div.control-form {
+    margin-bottom: 15px;
+    text-align: left;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap ;
+    font-style: italic;
+    
+}
+
+div.recordarme {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+div.recordarme label {
+width: 40%;
+margin-bottom: 0px;
+margin-top: 0px ;
+
+}
+
+div.recordarme input {
+    width: 10%;
+    padding: 0px 0px;
+    }
+
+
+
+.create-form .boton {
+    background: #728f63 ;
+    border:0; 
+    font-size: 15px;
+    margin: 15px ;
+    color: white;
+    padding: 0.2em 0.6em;
+    border-radius: 5px;
+    font-weight: 500;
+
+   
+}
+
+.create-form .boton:hover{
+    background: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;
+} 
+
+span.error {
+    visibility: hidden;
+}
+
+div.help-block a{
+
+    text-decoration: none;
+    color: rgb(115, 117, 115);
+    font-style: italic;
+}
+
+div.help-block a:hover{
+    color: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;
+}
+
+div.text-danger {
+    color: red; 
+    text-decoration: none;
+}
+
+.errorFront {
+    color: red; 
+}

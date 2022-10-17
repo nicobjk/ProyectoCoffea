@@ -1,0 +1,77 @@
+ <!--Formulario de Creación de productos-->
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('./partials/head.ejs')%>
+    <link rel="stylesheet" href="../css/styles_cargar_productos.css">
+    <script src="/js/productStore.js"> </script>
+
+<body>
+<!--Header-->
+    <%- include ('./partials/header.ejs')%>
+
+<main>  
+<form action="/products" method="POST" class="create-form" enctype="multipart/form-data">
+    <div>
+       <h1 id="titulo">Crear producto</h1>
+   </div>
+   
+<fieldset class="grupo"> 
+    
+    <div class="campo">
+        <label for="nombre"><strong>Nombre del producto:</strong></label>
+        <input type="text" name="name" id="nombre" placeholder="Ej.: Café Coffea origen 200g">
+            <% if (locals.errors && errors.name) { %>
+            <div class="text-danger"> <%= errors.name.msg %> </div>
+            <% } %>
+        <p class="errorName errorFront"></p>
+    </div>
+        
+    <div class="campo">
+        <label for="precio"><strong>Precio:</strong></label>
+        <input type="number" name="price" id="precio" placeholder="$5000">
+            <% if (locals.errors && errors.price) { %>
+            <div class="text-danger"> <%= errors.price.msg %> </div>
+            <% } %>
+    </div><br>
+
+    <div class="campo">
+        <label for="origin_id"><strong>Origen:</strong></label>
+        <select name="origin_id" id="origin_id">
+            <option>Seleccione un origen</option>
+            <option>-</option>
+            <% origins.forEach(origin => { %>
+                <option value="<%= origin.id %>" ><%=origin.name%></option>
+            <% }) %>
+        </select>
+    </div><br>
+
+    <div class="campo">
+        <label for="descripción"><strong>Descripción:</strong></label>
+        <textarea name="description" id="descripcion" placeholder="Escriba la descripción"  ></textarea>
+            <% if (locals.errors && errors.description) { %>
+            <div class="text-danger"> <%= errors.description.msg %> </div>
+            <% } %>
+        <p class="errorDescription errorFront"></p>
+    </div>
+    
+    <div class="campo">
+        <label class="imagen-producto">Elegí la foto del producto</label>        
+        <input type="file" name="image" id="imagenProducto">
+            <% if (locals.errors && errors.image) { %>
+            <div class="text-danger"> <%= errors.image.msg %> </div>
+            <% } %>
+            <p class="errorImage errorFront"></p>
+    </div>
+ 
+    <div>
+        <button  type="submit" class="boton">CREAR</button>
+        <button  type="reset" class="boton">BORRAR</button>
+    </div>
+
+</fieldset>
+</form>
+</main>
+ <!--Footer-->
+    <%- include ('./partials/footer.ejs')%>
+</body>
+</html>

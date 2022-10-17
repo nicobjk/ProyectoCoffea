@@ -1,0 +1,247 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header{
+    background-color: hsl(40,15%,31.4%);
+    /* background-color: rgba(94, 83, 64, 0.95); */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: auto;
+    align-items: center;
+    width: 100vw;
+}
+#logo{
+    width: 7rem;
+    text-align: center;
+}
+.nombre{
+    display: flex;
+    align-items: flex-end;
+}
+#coffea{
+    color: white;
+    font-size: 4rem;
+    font-family: 'Cookie', cursive;
+    font-weight: 100;
+}
+#shop{
+    color: white;
+    font-size: 1.5rem;
+}
+header .form{
+    display: flex;
+    flex-direction: row;
+    text-align: center;    
+}
+header .form .input{
+    display: flex;
+    background-color: #FFF;  
+    width: 100%;  
+    outline: none;
+    color: #666;
+    padding: 2px;
+    margin-top: 10px;
+    border-radius: 5px;
+    align-self: center;
+    display: none;
+}
+header .form .submit {
+    display: flex;
+    color: white;    
+    font-size: 1.5rem;
+    margin: 10px;
+    align-self: stretch;    
+}
+.inicio{
+    display: flex;
+    flex-direction: row;        
+}
+.inicio a{
+    display: flex;
+    margin: 15px;
+    color: white;    
+    text-decoration: none;
+    display: none;
+}
+.inicio a:hover {
+    color: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;  
+}
+
+.carrito{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.carrito a{
+    color: white;       
+}
+
+.carrito a:hover {
+    color: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;  
+}
+
+div.burger-menu{
+    text-align: center;
+    align-self: center;
+    margin: 10px 20px 20px 0px;
+}
+
+div.burger-menu i{
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 1.5rem;
+    height: 20px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 20px;
+}
+@media(min-width: 768px){   
+.logo img{ width: 6vw;}
+div.burger-menu{ display: none;} 
+header .form{display: flex;}
+header .form .input{ 
+    display: flex;    
+}
+.inicio a{
+    display: flex;
+    font-size: 90%;
+    /* font-weight: bold; */
+}
+header .form .submit { 
+    font-size: 100%;
+}
+.carrito{
+    font-size: 4;
+}
+#caja-producto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+#producto{
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;    
+}
+#producto:hover{
+    text-shadow: none;
+    border: solid #a7c697 1px;
+}
+}
+
+/*MAIN*/
+main section{
+    width: 100vw;
+    text-align: center;
+    align-content: center;
+    background-color: #FFF;
+    font-size: 15px;
+}
+main section.banner img {
+    width: 100vw;    
+}
+
+
+h2{
+    text-align: center;
+}
+
+ div img {
+     width: 100%;
+     padding: 20px;
+     max-width: 380px;
+ }
+
+.datos-producto a {
+    text-decoration: none;
+    color: #2c3425;
+    line-height: 30px;
+}
+
+.boton {
+    border: solid #728f63 5px;
+    border-radius: 5px;
+    background-color: #728f63;
+}
+a.boton{
+    color: white;
+}
+
+section.opinion {
+    background-color: #F5ECCE;
+    padding: 40px;
+    width: 100vw;
+}
+
+section.opinion h2{
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+section.opinion p {
+    font-style: italic;
+}
+section.como-comprar {
+    background-color: #2c3425;
+    line-height: 30px;
+    width: 100vw;
+}
+
+section.como-comprar{
+    padding: 40px;
+}
+section.como-comprar a , section.como-comprar p, section.como-comprar h2, section.como-comprar h3 {
+    color: white;
+}
+
+.icono {
+    color: #728f63;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+section.como-comprar p.numero-paso {
+    color: #728f63;
+}
+ div.comprar a{
+     text-decoration: none;
+     color:white;
+     border: solid #728f63 5px;
+     border-radius: 5px;
+     background-color: #728f63;
+ }
+/*FOOTER*/
+footer {
+    background-color: rgba(94, 83, 64, 0.95);
+    color:white;
+    text-align: center;
+    
+}
+.direccion {
+    font-size: 18px;
+    width: 70vw;
+    margin: auto;
+    padding: 15px;
+    
+}
+    footer a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+}
+
+div.enlaces_footer {
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+/*Descargar fuente con menos peso*/

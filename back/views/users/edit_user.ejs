@@ -1,0 +1,39 @@
+  <!--Formulario de edición del usuario-->
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('../partials/head.ejs')%>
+    <link rel="stylesheet" href="/css/styles_cargar_productos.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+<body>
+    <%- include ('../partials/header.ejs')%>
+ <main>  
+    <form action="/users/edit/<%= userToEdit.id %>" method="POST" class="create-form" enctype="multipart/form-data">
+   
+   <div>
+       <h1 id="titulo">Editar perfil</h1>
+   </div>
+   
+   <fieldset class="grupo"> 
+   <div class="campo">
+      <label class="imagen-producto"><strong>Elegí tu foto de perfil</strong></label>
+      <input type="file" name="avatar" required>
+   </div>
+   <div class="campo">
+      <label for="nombre"><strong>Nombre:</strong></label>
+      <input type="text" name="name" id="nombre" value="<%=userToEdit.name%>" required>
+   </div><br>
+   <div class="campo">
+      <label ><strong>Teléfono:</strong></label>
+      <input type="text" name="tel"  value= "<%= userToEdit.tel %>">
+   </div>
+   <div>
+      <button  type="submit" class="boton">GUARDAR</button>
+   </div>
+   </fieldset>
+</form>
+</main>
+   <!--Footer-->
+   <%- include ('../partials/footer.ejs')%> 
+</body>
+</html>

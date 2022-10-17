@@ -1,0 +1,41 @@
+<!-- PROFILE -->
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('../partials/head.ejs')%>
+    <link rel="stylesheet" href="../css/styles_profile.css">
+<body>
+     <%- include ('../partials/header.ejs')%>
+    
+<main>
+    <h1>Bienvenido <%= user.name %>!</h1>
+    
+    <section class="image">
+        <img src="../images/usersImages/<%=user.avatar%>">
+    </section>
+    
+    <div class = "profileField">
+        <p>Nombre: <%= user.name%> </p>
+    </div>
+    <div class = "profileField">
+        <p>Email: <%= user.email%> </p>
+    </div>
+    <div class = "profileField">
+        <p>Teléfono: <%= user.tel%> </p>
+    </div>
+    <div>
+        <form action='/users/logout' method="GET" style="display: inline-flex">
+            <button class="profileButton" type="submit" >Salir</button>
+        </form>
+    </div>
+    <div>
+        <form action='/users/edit/<%= user.id %>' method="get" style="display: inline-flex">
+            <button class="profileButton2" type="submit" >Editar</button>
+        </form>
+        <form action='/users/delete/<%= user.id %>?_method=DELETE' method="post" style="display: inline-flex">
+            <button class="profileButton2" type="submit" >Eliminar</button>
+        </form>
+    </div> 
+</main>
+    <%- include ('../partials/footer.ejs')%> 
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!-- HOME -->
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('./partials/head.ejs')%>
+
+<body>
+<!--Header-->
+    <%- include ('./partials/header.ejs')%>
+<main>
+    <section class="banner">
+            <img src="/images/banner.jpg">
+    </section><br>
+        
+    <section class="productos">
+        <h2>NUESTROS CAFÉS</h2>
+        
+        <div id="caja-producto">
+            <% for(let producto of products){ %>
+        <div id="producto">
+            <div class="imagen-cafe">
+                <a href="/products/detail/<%= producto.id %>"><img src="/images/<%= producto.image %>"></a>
+            </div>
+            <div class="datos-producto">
+                <a href="#" class="descrpcion-juan-valdez"><%= producto.name %></a>
+                <p class="precio">$ <%= producto.price  %></p>
+                <a href="/products/detail/<%= producto.id %>" class="boton">Ver más</a>
+            </div>
+        </div>
+            <% } %>
+        </div>
+    </section>
+         
+    <section class="opinion">
+            <h2>LO QUE DICEN NUESTROS CLIENTES</h2>
+            <p>"Destaco el sistema de venta online y posterior delivey,hace un año soy cliente y la calidad y entrega son perfectas"</p>
+            <p>Juan Pablo / La Plata, Argentina</p>
+    </section>
+
+
+    <section class="como-comprar">
+        <h2>PASOS PARA REALIZAR TU COMPRA</h2><br>
+        
+        <div class="pasos">			
+            <div class="icono"><i class="fa-solid fa-cart-shopping"></i></div>
+            <h3>ELEGÍ TU CAFÉ</h3>
+            <p class="numero-paso">PASO 1</p>
+            <p>Seleccioná el café que te guste, elegí si lo querés llevar en grano o molido y si querés comprar una bolsa de 250grs o de 1kg.</p>
+        </div>
+            
+        <div class="pasos">
+            <div class="icono"><i class="fa-solid fa-credit-card"></i></div>
+            <h3>PAGÁ EN FORMA SEGURA</h3>
+            <p class="numero-paso">PASO 2</p>
+            <p>Cobramos a través de Mercado Pago, la plataforma más segura del país. Aceptamos todas las tarjetas de crédito y débito.</p>
+        </div>
+
+        <div class="pasos">
+            <div class="icono"><i class="fa-solid fa-truck-fast"></i></div>
+            <h3>DESPACHO EN 24HS</h3>
+            <p class="numero-paso">PASO 3</p>
+            <p>Llega por Correo Argentino a todo el país y tarda entre 2 a 5 días hábiles. Tu número de seguimiento servirá parar rastrearlo.</p>
+        </div>
+        
+        <div class="comprar"><br>
+            <a href="/products">COMPRAR CAFÉ ONLINE</a>    
+        </div>
+    </section>
+</main>
+<!--Footer-->
+<%- include ('./partials/footer.ejs')%>
+</body>
+</html>

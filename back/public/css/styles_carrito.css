@@ -1,0 +1,333 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header{
+    background-color: hsl(40,15%,31.4%);
+    /* background-color: rgba(94, 83, 64, 0.95); */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: auto;
+    align-items: center;
+    width: 100vw;
+}
+#logo{
+    width: 7rem;
+    text-align: center;
+}
+.nombre{
+    display: flex;
+    align-items: flex-end;
+}
+#coffea{
+    color: white;
+    font-size: 4rem;
+    font-family: 'Cookie', cursive;
+    font-weight: 100;
+}
+#shop{
+    color: white;
+    font-size: 1.5rem;
+}
+header .form{
+    display: flex;
+    flex-direction: row;
+    text-align: center;    
+}
+header .form .input{
+    display: flex;
+    background-color: #FFF;  
+    width: 100%;  
+    outline: none;
+    color: #666;
+    padding: 2px;
+    margin-top: 10px;
+    border-radius: 5px;
+    align-self: center;
+    display: none;
+}
+header .form .submit {
+    display: flex;
+    color: white;    
+    font-size: 1.5rem;
+    margin: 10px;
+    align-self: stretch;    
+}
+.inicio{
+    display: flex;
+    flex-direction: row;        
+}
+.inicio a{
+    display: flex;
+    margin: 15px;
+    color: white;    
+    text-decoration: none;
+    display: none;
+}
+
+.inicio a:hover {
+    color: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;  
+}
+
+.carrito{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.carrito a{
+    color: white;       
+}
+
+.carrito a:hover {
+    color: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;  
+}
+
+div.burger-menu{
+    text-align: center;
+    align-self: center;
+    margin: 10px 20px 20px 0px;
+}
+
+div.burger-menu i{
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 1.5rem;
+    height: 20px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 20px;
+}
+@media(min-width: 768px){   
+    .logo img{ width: 6vw;}
+    div.burger-menu{ display: none;} 
+    header .form{display: flex;}
+    header .form .input{ 
+        display: flex;    
+    }
+    .inicio a{
+        display: flex;
+        font-size: 90%;
+        /* font-weight: bold; */
+    }
+    header .form .submit { 
+        font-size: 100%;
+    }
+    .carrito{
+        font-size: 4;
+    }
+    }
+
+/* Footer */
+footer {
+    background-color: rgba(94, 83, 64, 0.95);
+    color:white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.direccion {
+    font-size: 18px;
+    width: 70vw;
+    margin: auto;
+    padding: 15px;
+    
+}
+    footer a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+}
+
+.enlaces_footer {
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+/*Carrito*/
+main {
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px;
+    }
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+   }
+
+
+img {
+    width: 5vw;
+}
+
+div.producto1, div.producto2 {
+    width: 90vw;
+    border: solid rgba(109, 109, 109, 0.10) 1px;
+    margin: auto;
+    border-radius: 5px;    
+}
+
+.producto1 a , .producto2 a {
+    padding: 0 50px;
+}
+div.actualizar {
+    border: solid rgba(109, 109, 109, 0.10) 1px;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: #F5ECCE;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+a.actualizar-carrito {
+    border: solid #728f63 1px;
+    background-color: #728f63;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+    }
+
+.actualizar a:hover {
+    background: #a7c697;
+    text-shadow: none;
+    border: solid #a7c697 1px;
+}
+
+.img-producto1 , .img-producto2 {
+    display: flex; ;
+    justify-content: center;
+    max-width: 20%;
+}    
+
+a.eliminar{
+   padding: 20px;
+   color:rgba(109, 109, 109, 0.50)
+}   
+
+.precio-producto1 , .cant-producto1 , .subtotal-producto1 , .precio-producto2 , .cant-producto2 , .subtotal-producto2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.producto-producto1 , .producto-producto2 {
+    display: flex;
+    justify-content: center;
+    max-width: 20%;
+    text-align: center;
+}
+
+section.total {
+    padding: 50px;
+    }
+
+    div.filaTotal {
+    margin: auto;
+    display: flex;
+    justify-content: left;
+    border: solid rgba(109, 109, 109, 0.10) 1px;
+    margin-right: 10px;
+    background-color: #F5ECCE;
+    border-radius: 5px;      
+}
+
+section.total div.box-total {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    border: solid rgba(109, 109, 109, 0.10) 1px;
+    margin-right: 10px;
+    border-radius: 5px;
+    }
+
+section.total div.finalizar {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border: solid rgba(109, 109, 109, 0.10) 1px;
+    margin-right: 10px;
+    background-color: #F5ECCE;
+    padding: 10px;
+    border-radius: 5px;
+   }
+
+ a.finalizar-compra {
+     border: solid #728f63 1px;
+     background-color: #728f63;
+     text-decoration: none;
+     color: white; 
+     border-radius: 5px;
+     padding: 2px;
+ }
+
+ div.finalizar a:hover {
+    background: #a7c697;
+    text-shadow: none;
+    border: solid #a7c697 1px;
+}
+
+
+
+/* Media */
+
+ @media (min-width: 768px) {
+    .producto1, .producto2 {
+        width: 95vw;
+        border: solid black 1px;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        }
+  .actualizar {
+      width: 95vw;
+  }
+    
+section.total {
+        padding: 50px;
+     }
+    div.filaTotal {
+        margin: auto;
+        width: 50vw;
+        display: flex;
+        justify-content: left;
+        margin-right: 10px;
+        background-color: #F5ECCE;
+    }
+    
+    div.box-total {
+        margin: auto;
+        width: 50vw;
+        display: flex;
+        justify-content: space-between;
+        border: dotted black 1px;
+        margin-right: 10px;
+        }
+         
+    div.finalizar {
+        margin: auto;
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        border: dotted black 1px;
+        margin-right: 10px;
+        background-color: #F5ECCE;
+       }
+    
+     .finalizar a {
+         border: solid #728f63 1px;
+         background-color: #728f63;
+         text-decoration: none;
+         color: white;
+     }
+}
+

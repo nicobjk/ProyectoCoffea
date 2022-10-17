@@ -1,0 +1,40 @@
+<header>
+    <div id="logo">
+        <img  src="/images/Logo_coffea_sinFondo.png" alt="Logo Coffea Shop">
+    </div>
+    <div class="nombre">
+        <p id="coffea">Coffea</p>
+        <p id="shop">SHOP</p>
+    </div>
+    <form class="form" action="/products/search" method="POST">
+        <div class="input">
+            <input name= "search" type="text" placeholder= "Buscar...">
+        </div>
+        <div class="submit">
+            <button type="submit" class="boton"><i class="fa fa-search"></i></button>
+            
+            
+        </div>
+    </form>
+    </div>
+    <div class="inicio">            
+            <a href="/">INICIO </a>
+            <a href="/products">PRODUCTOS </a>
+           <a href="/nosotros">NOSOTROS</a>
+            <% if (locals.isLogged) { %> 
+            <a href="/users/profile">HOLA <%= locals.userLogged.name %>!</a>
+            <%} else { %> 
+            <a href="/users/register">REGISTRATE</a>
+            <a href="/users/login">INGRESAR </a>
+
+           <% } %>                  
+   
+</div>
+            
+    <div class="carrito">
+        <a href="/iconoCarrito"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+    <div class="burger-menu">
+        <i class="fa fa-bars burger"></i>
+    </div>
+</header>
