@@ -121,8 +121,8 @@ const usersController = {
 	profile: (req, res)=> {
 
 		db.Users.findByPk(req.session.userLogged.id, {raw : true})
-		.then (({id, name, email, tel, avatar}) => {
-			const user = {id, name, email, tel, avatar}
+		.then (({id, name, email, tel, avatar, code}) => {
+			const user = {id, name, email, tel, avatar, code}
 			res.render('../views/users/profile',{user})
 		})
 	},

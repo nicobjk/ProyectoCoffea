@@ -60,13 +60,24 @@
             <% } %>
         <p class="errorPassword errorFront"></p>
     </div>
-      
+
     <div class="campo">
-        <label for="contraseña"><strong>Confirmar contraseña:</strong></label>
-        <input type="password" name="confirmPassword" id="confirmarContrasenia" placeholder="**********">
+        <label for="confirmPassword"><strong>Confirmar contraseña:</strong></label>
+        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="**********">
         <p class="errorConfirmPassword errorFront"></p>
     </div>
-   
+
+    <div class="campo">
+        <label for="codeCheck"><strong>¿Tiene un código de administrador?</strong></label>
+        <input type="checkbox" name="codeCheck" id="codeCheck">
+        <div class = "codeOff">
+        <label class = "code" for="code"><strong>Ingrese el código:</strong></label>
+        <input class = "code" type="password" name="code" id="code">
+        <p class="errorConfirmPassword errorFront"></p>
+        </div>
+    </div>
+
+
     <div>
        <button  type="submit" class="boton">CREAR CUENTA</button>
     </div>

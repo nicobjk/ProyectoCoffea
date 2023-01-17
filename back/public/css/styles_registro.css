@@ -264,3 +264,11 @@ div.enlaces_footer {
     justify-content: space-around;
     font-size: 15px;
 }
+
+div.codeOff {
+    display: none;
+}
+
+div.codeOn {
+    display: block;
+}

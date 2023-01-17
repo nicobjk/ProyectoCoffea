@@ -22,7 +22,10 @@ module.exports = (sequelize, dataTypes) =>{
         },
         avatar: {
             type: dataTypes.STRING
-        }  
+        },
+        code: {
+            type: dataTypes.STRING
+        }
     }; 
     let config = {
         tableName : "users",

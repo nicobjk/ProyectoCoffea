@@ -26,10 +26,14 @@
             
             
             <!--BOTON DE CREAR PRODUCTO-->
-            <div>
-                <a href="/products/create" class="boton">CREAR PRODUCTO</a>
-            <br>
-            </div>
+            <% if (locals.userLogged.code == "2233") { %>
+                <% console.log(locals.userLogged.code) %> 
+                <div>
+                    <a href="/products/create" class="boton">CREAR PRODUCTO</a>
+                <br>
+                </div>
+                <% } %> 
+            
             </section>
            
 

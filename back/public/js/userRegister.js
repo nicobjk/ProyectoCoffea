@@ -4,7 +4,8 @@ window.addEventListener("load", function () {
     const inputNombre = document.querySelector("#nombre");
     const inputEmail = document.querySelector("#email");
     const inputContrasenia = document.querySelector("#contrasenia");
-    const inputConfirmarContrasenia = document.querySelector("#confirmarContrasenia");
+    const inputConfirmarContrasenia = document.querySelector("#confirmPassword");
+    const inputCheckbox = document.querySelector("#codeCheck");
 
 
     inputProfileImage.addEventListener("mouseover",()=>{  
@@ -104,7 +105,13 @@ window.addEventListener("load", function () {
                         errorConfirmPassword.innerHTML = " "
         }
     });   
-
+    inputCheckbox.addEventListener("change", () => {
+        if (inputCheckbox.checked) {
+            document.querySelector(".codeOff").classList.add("codeOn");
+        } else {
+            document.querySelector(".codeOff").classList.remove("codeOn");
+        }
+    });
     //form.addEventListener("submit", (e) => {
     //   e.preventDefault();
     //});
